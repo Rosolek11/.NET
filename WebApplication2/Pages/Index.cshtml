@@ -1,0 +1,42 @@
+﻿@page
+@model WebApplication2.Pages.DeltaCalculatorModel
+@{
+    ViewData["Title"] = "Kalkulator Delty";
+}
+
+<h1>Kalkulator Delty</h1>
+
+<form method="post" >
+    <label for="a">Współczynnik a:</label>
+    <input type="number" id="a" name="a" value="@Model.A" required />
+    <br />
+
+    <label for="b">Współczynnik b:</label>
+    <input type="number" id="b" name="b" value="@Model.B" required />
+    <br />
+
+    <label for="c">Współczynnik c:</label>
+    <input type="number" id="c" name="c" value="@Model.C" required />
+    <br />
+
+    <button type="submit">Oblicz deltę</button>
+</form>
+
+@if (Model.Delta != null)
+{
+<div>
+    <h2>Wynik:</h2>
+    <p>Delta: @Model.Delta</p>
+
+    @if (Model.x1 != null)
+    {
+        <p>x1: @Model.x1</p>
+    }
+
+    @if (Model.x2 != null && Model.x2!=0)
+    {
+        <p>x2: @Model.x2</p>
+    }
+
+</div>
+}
