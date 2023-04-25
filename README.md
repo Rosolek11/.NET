@@ -1,2 +1,2 @@
 # .NET
-Zadanie rekrutacyjne w .NET
+Zadanie  w .NET
